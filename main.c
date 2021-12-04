@@ -239,18 +239,13 @@ void newbmp(BMP bmp, char *old_file, char *new_file) {
             else if (j == multiplicity - 1) {
                 for (int k = 7; k >= 8-(int)(bmp.width-(multiplicity-1)*8); k--)
                     current_char += bmp.array[i][j * 8 + 7 - k] << k;
-                
             }
             fputc((int)current_char,fout);
-            
-        
-       
         }
         if (multiplicity % 4 != 0) {
             for(int k = 0; k < 4 - (multiplicity % 4); k++)
                 fputc(0, fout);
         }
-        
     }
 }
 
@@ -314,8 +309,6 @@ int main(int argc, char **argv) {
                 strncat(name_of_file, ".bmp ", 5);
                 strncat(new_image_adress, name_of_file, strlen(name_of_file)+1);
                 newbmp(new, argv[2], new_image_adress);
-                
-               
        }
     // old.array = new.array;
     }
