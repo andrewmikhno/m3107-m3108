@@ -310,7 +310,7 @@ int main(int argc, char **argv) {
                 strncat(new_image_adress, name_of_file, strlen(name_of_file)+1);
                 newbmp(new, argv[2], new_image_adress);
        }
-    // old.array = new.array;
+        
     }
     return 0;
 }
